@@ -15,7 +15,7 @@ const serviceType = '_http._tcp';
 chrome.mdns.onServiceList.addListener(onDevices, {serviceType});
 chrome.mdns.forceDiscovery(() => {
     console.log('start');
-}
+})
 </script>
 </body>
 </html>
