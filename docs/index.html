@@ -12,6 +12,12 @@ const onDevices = (devices) => {
     console.log(devices);
 }
 const serviceType = '_http._tcp';
+chrome.app.window.create('window.html', {
+    outerBounds: {
+        width: 400,
+        height: 500
+    }
+});
 chrome.mdns.onServiceList.addListener(onDevices, {serviceType});
 chrome.mdns.forceDiscovery(() => {
     console.log('start');
